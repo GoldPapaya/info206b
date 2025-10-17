@@ -25,7 +25,7 @@ print("Binary search result: ", binarySearch([1,2,3,4,5], 1))
 #recursive binary search
 def recursiveBinarySearch(L, x, low, high):
     mid = (high+low)//2
-    if low < high:
+    if low > high:
         return False
     elif L[mid] == x:
         return True
@@ -35,4 +35,4 @@ def recursiveBinarySearch(L, x, low, high):
         return recursiveBinarySearch(L, x, low, mid-1)
     
 a = [1,2,3,4,5]
-print('Recursive binary search: ', recursiveBinarySearch(a, 80, 0, len(a)-1))
+print('Recursive binary search: ', recursiveBinarySearch(a, 4, 0, len(a)-1))
